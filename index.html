@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src='./jquery.my-message.1.1.js'></script>
+    <!-- <link href="https://cdn.bootcss.com/jquery-toast-plugin/1.3.2/jquery.toast.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery-toast-plugin/1.3.2/jquery.toast.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./assest/jquery.my-message.1.1.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <ul>
+                <!-- <span class='triangle'></span> -->
+                <li><a href="#">首页</a></li>
+                <li><a href="#c">产品介绍</a></li>
+                <li><a href="#2">最新动态</a></li>
+                <li><a href="#e">用户反馈</a></li>
+            </ul>
+        </div>
+        <div class="a">
+            <img class="img" src="./assest/zhutu@2x.png" alt="img">
+            <img class="code" src="./assest/erweima@2x.png" alt="code">
+        </div>
+        <div class="b">
+            <p>加微信免费领取缅甸原石鉴定手册</p>
+            <img class="wx" src="./assest//erweima@2x.png" alt="code">
+            <p>添加微信：wang221934  <span data-clipboard-text="wang221934" class="copy">复制微信</span> </p>
+        </div>
+        <div id="c" class="c">
+            <img class="img" src="./assest/1_what@2x.png" alt="img">
+            <img class="img" src="./assest/1_caishui@2x.png" alt="img">
+            <img class="img" src="./assest/2_caise@2x.png" alt="img">
+            <img class="img" src="./assest/3_cailie@2x.png" alt="img">
+            <img class="img" src="./assest/4-caidi@2x.png" alt="img">
+            <img class="img" src="./assest/5_caiwu@2x.png" alt="img">
+        </div>
+        <div class="b">
+            <p>免费领取切涨秘笈</p>
+            <img class="wx" src="./assest//erweima@2x.png" alt="code">
+            <p>添加微信：wang221934  <span data-clipboard-text="wang221934" class="copy">复制微信</span> </p>
+        </div>
+        <div class="d">
+            <img class="img" src="./assest/chanpin_1@2x.png" alt="img">
+            <img class="img" src="./assest/chanpin_2@2x.png" alt="img">
+        </div>
+        <div class="border"></div>
+        <div id='e' class="e">
+            <img class="img" src="./assest/pingjia_1@2x.png" alt="img">
+            <img class="img" src="./assest/pingjia_2@2x.png" alt="img">
+            <img class="img" src="./assest/pingjia_3@2x.png" alt="img">
+            <img class="img" src="./assest/pingjia_4@2x.png" alt="img">
+        </div>
+        <div class="border"></div>
+        <div class="f">
+            <p class="tit">最新活动领取名单</p>
+
+            <ul>
+                <li><span class="green">[5分钟]:</span>已领取原石手册！</li>
+                <li><span class="green">[5分钟]:</span>已领取原石手册！</li>
+                <li><span class="green">[8分钟]:</span>已领取原石手册！</li>
+                <li><span class="green">[9分钟]:</span> 已领取原石手册！</li>
+                <li><span class="green">[10分钟]:</span>已领取原石手册！</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="text">
+                <p>添加微信：wang221934 </p>
+                <p>加微信免费领取原石手册，进交流群</p>
+            </div>
+            <div class="copy" data-clipboard-text="wang221934">复制微信</div>
+        </div>
+    </div>
+    <script>
+        var clipboard = new ClipboardJS('.copy');
+        var message = new MyMessage.message({
+            /*默认参数，下面为默认项*/
+            iconFontSize: "18px", //图标大小,默认为20px
+            messageFontSize: "12px", //信息字体大小,默认为12px
+            showTime: 2000, //消失时间,默认为3000
+            align: "center", //显示的位置类型center,right,left
+            message: "这是一条消息", //消息内容,默认为"这是一条消息"
+            type: "normal", //消息的类型，还有success,error,warning等，默认为normal
+        });
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            message.add("复制成功", "success");
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            console.error('Action:', e.action);
+            message.add("复制失败,请长摁复制", "error");
+        });
+    </script>
+</body>
+</html>

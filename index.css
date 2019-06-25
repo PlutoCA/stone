@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+
+    margin: 0 auto;
+    width: 375px;
+    height: 100%;
+    margin-bottom: 90px;
+}
+
+
+ul, li {
+    list-style: none;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav {
+    width: 375px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0D0B07;
+}
+.nav > ul > li {
+    /* flex: 1;
+    width: 62px; */
+    height: 35px;
+    margin: 6px 0;
+    padding: 0 16px;
+    line-height: 35px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    border-radius:16px;
+    /* float: left; */
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8.7px 5px 0 5px;
+    border-color: #017530 transparent transparent transparent;
+}
+
+.img {
+    width: 100%;
+}
+.a {
+    position: relative;
+}
+.code {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    right: 15px;
+    bottom: 53px;
+}
+
+.b {
+    height: 310px;
+    color: #0C0C0C;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wx {
+    width: 215px;
+    height: 215px;
+}
+.b > p:last-of-type {
+    font-size: 14px;
+}
+.copy {
+    color: #fff;
+    display: inline-block;
+    width:64px;
+    height:30px;
+    line-height: 30px;
+    background:rgba(1,117,48,1);
+    border-radius:15px;
+    font-size: 11px;
+}
+.border {
+    width:375px;
+    height:10px;
+    background:rgba(238,238,238,1);
+}
+.f {
+    text-align: center;
+}
+.f > .tit {
+    margin: 22px 0;
+    display: inline-block;
+    width:145px;
+    height:31px;
+    text-align: center;
+    line-height: 31px;
+    border:1px dashed red;
+    border-radius:16px;
+    font-size: 16px;
+    font-weight:400;
+    color: #FF0000;
+}
+.f > ul > li > .green {
+    color: #017530;
+}
+.f > ul > li {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    background: url('./assest/xuanfu_bg@2x.png') no-repeat;
+    background-size: contain;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.footer > .text {
+    text-align: left;
+    font-size: 15px;
+}
+.footer > .text p:last-of-type {
+    font-size: 13px;
+    padding-top: 9px;
+}
+.footer > .copy {
+    width:98px;
+    height:38px;
+    line-height: 38px;
+    background:linear-gradient(90deg,rgba(50,166,102,1),rgba(0,124,77,1));
+    border-radius:19px;
+    font-size: 14px;
+}
